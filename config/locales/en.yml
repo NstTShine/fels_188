@@ -21,3 +21,25 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    application:
+      framgiaELearning: "Framgia E-Learning System"
+    footer:
+      foo_content: "This is my first web site created in Ruby lang"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+    header:
+      framgiaELearning: "Framgia E-Learning System"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+  static_pages:
+    help:
+      help: "Help"
+      home: "Home"
+      content: "Let me know how I can help. Please contact to"
+    home:
+      content: "Wellcome to Framgia E-Learning System"
+      haha: "是非、Framgiaと楽しく勉強しましょう"
+      signup: "Sign up now!"
