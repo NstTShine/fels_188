@@ -57,6 +57,8 @@ en:
     new:
       title_singup: "Sign up"
       create_acc: "Create my account"
+    index:
+      alluser: "All users"
   sessions:
     new:
       login: "Log in"
