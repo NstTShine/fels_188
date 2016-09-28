@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+
+  def index
+    @users = User.order(created_at: :desc).paginate page: params[:page],
+      per_page: Settings.per_page
+  end
+
   def show
     @user = User.find_by id: params[:id]
     if @user.nil?
@@ -6,6 +12,7 @@ class UsersController < ApplicationController
        redirect_to root_path
     end
   end
+
   def new
     @user = User.new
   end
