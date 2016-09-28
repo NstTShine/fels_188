@@ -25,6 +25,7 @@ en:
   user_not_found: "User was not found!"
   error_ms: "The form contains"
   err: error
+  login_error: "Invalid email/password combination"
   layouts:
     application:
       framgiaELearning: "Framgia E-Learning System"
@@ -37,7 +38,12 @@ en:
       framgiaELearning: "Framgia E-Learning System"
       home: "Home"
       help: "Help"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
       login: "Log in"
+      logout: "Log out"
+      accout: "Account"
   static_pages:
     help:
       help: "Help"
@@ -51,3 +57,8 @@ en:
     new:
       title_singup: "Sign up"
       create_acc: "Create my account"
+  sessions:
+    new:
+      login: "Log in"
+      signup: "Sign up now!"
+      new: "New user?"
