@@ -26,6 +26,8 @@ en:
   error_ms: "The form contains"
   err: error
   login_error: "Invalid email/password combination"
+  login_require: "Please log in!"
+  update_success: "Profile updated"
   layouts:
     application:
       framgiaELearning: "Framgia E-Learning System"
@@ -38,6 +40,8 @@ en:
       framgiaELearning: "Framgia E-Learning System"
       home: "Home"
       help: "Help"
+      lesson: "Lessons"
+      words: "Words"
       users: "Users"
       profile: "Profile"
       settings: "Settings"
@@ -59,8 +63,17 @@ en:
       create_acc: "Create my account"
     index:
       alluser: "All users"
+    edit:
+      save_change: "Save changes"
+      edit_user: "Edit user"
+      content: "Update your profile"
+      change: "Change"
   sessions:
     new:
       login: "Log in"
       signup: "Sign up now!"
       new: "New user?"
+  admin:
+    categories:
+      admin_category_tile: "Admin add Category"
+      category_list: "List Categories"
