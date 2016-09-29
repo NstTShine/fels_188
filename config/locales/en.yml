@@ -28,6 +28,15 @@ en:
   login_error: "Invalid email/password combination"
   login_require: "Please log in!"
   update_success: "Profile updated"
+  category_delete: "Delete this Category"
+  category_edit: "Edit this Category"
+  update_category_success: "Update Success !"
+  update_category_fail: "Update failed !"
+  category_not_found: "Category was not found"
+  category_edit_title1: "Edit Category"
+  category_btn_update2: "Update"
+  category_page_title: "Show Categories"
+
   layouts:
     application:
       framgiaELearning: "Framgia E-Learning System"
@@ -40,6 +49,7 @@ en:
       framgiaELearning: "Framgia E-Learning System"
       home: "Home"
       help: "Help"
+      categories: "Categories"
       lesson: "Lessons"
       words: "Words"
       users: "Users"
@@ -75,5 +85,16 @@ en:
       new: "New user?"
   admin:
     categories:
-      admin_category_tile: "Admin add Category"
-      category_list: "List Categories"
+      index:
+        option: "Option"
+        sure: "Are you sure?"
+      edit:
+        category.edit_title: "Edit Category"
+        category.btn_update: "Update8"
+  categories:
+    index:
+      page_title: "Show Categories"
+      order: "Order"
+      category_name: "Category Name"
+      description: "Description"
+      created: "Create Date"
