@@ -1,18 +1,18 @@
 <%= form_for @user do |f| %>
   <%= render "shared/error_messages",object: @user %>
-  <%= f.label :name %>
+  <%= f.label :name %> <span class="require">*</span>
   <%= f.text_field :name, class: "form-control" %>
 
-  <%= f.label :email %>
+  <%= f.label :email %> <span class="require">*</span>
   <%= f.email_field :email, class: "form-control" %>
 
   <%= f.label :phone_number %>
   <%= f.text_field :phone_number, class: "form-control" %>
 
-  <%= f.label :password %>
+  <%= f.label :password %> <span class="require">*</span>
   <%= f.password_field :password, class: "form-control" %>
 
-  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.label :password_confirmation, "Confirmation" %> <span class="require">*</span>
   <%= f.password_field :password_confirmation, class: "form-control" %>
 
   <%= f.submit (yield :button_text), class: "btn btn-primary" %>

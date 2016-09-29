@@ -7,6 +7,20 @@ class Admin::CategoriesController < ApplicationController
       .paginate page: params[:page], per_page: Settings.per_page
   end
 
+  def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new category_params
+    if @category.save
+      flash[:success] = t "category_add_success"
+      redirect_to admin_categories_path
+    else
+      flash[:danger] = t "category_add_fail"
+    end
+  end
+
   def edit
   end
 

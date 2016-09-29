@@ -33,9 +33,14 @@ en:
   update_category_success: "Update Success !"
   update_category_fail: "Update failed !"
   category_not_found: "Category was not found"
-  category_edit_title1: "Edit Category"
-  category_btn_update2: "Update"
+  category_edit_title: "Edit Category"
+  category_btn_update: "Update"
+  category_add_title1: "Add Category"
+  category_btn_add: "Add"
   category_page_title: "Show Categories"
+  category_add_success: "Add Success"
+  category_add_fail: "Add failed!"
+  sure: "Are you sure?"
 
   layouts:
     application:
@@ -87,10 +92,6 @@ en:
     categories:
       index:
         option: "Option"
-        sure: "Are you sure?"
-      edit:
-        category.edit_title: "Edit Category"
-        category.btn_update: "Update8"
   categories:
     index:
       page_title: "Show Categories"
