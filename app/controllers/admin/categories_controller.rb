@@ -17,6 +17,7 @@ class Admin::CategoriesController < ApplicationController
       flash[:success] = t "category_add_success"
       redirect_to admin_categories_path
     else
+      render :new
       flash[:danger] = t "category_add_fail"
     end
   end
@@ -32,6 +33,17 @@ class Admin::CategoriesController < ApplicationController
       flash[:success] = t "update_category_fail"
       render :edit
     end
+  end
+
+  def destroy
+    if @category.verify_destroy_category
+      flash[:danger] = t "can_not_delete_category"
+    elsif @category.destroy
+      flash[:success] = t "category_deleted"
+    else
+      flash[:danger] = t "category_delete_fail"
+    end
+    redirect_to admin_categories_path
   end
 
   private

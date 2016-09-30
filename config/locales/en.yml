@@ -41,6 +41,9 @@ en:
   category_add_success: "Add Success"
   category_add_fail: "Add failed!"
   sure: "Are you sure?"
+  category_deleted: "Category was deleted !"
+  category_delete_fail: "Delete failed !"
+  can_not_delete_category: "Can not delete because the date is being used"
 
   layouts:
     application:
