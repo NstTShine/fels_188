@@ -44,7 +44,11 @@ en:
   category_deleted: "Category was deleted !"
   category_delete_fail: "Delete failed !"
   can_not_delete_category: "Can not delete because the date is being used"
-
+  tile_list_words: "List Words"
+  index: "Index"
+  category: "Category"
+  japanese: "Japanese"
+  vietnamese: "Vietnamese"
   layouts:
     application:
       framgiaELearning: "Framgia E-Learning System"
@@ -102,3 +106,10 @@ en:
       category_name: "Category Name"
       description: "Description"
       created: "Create Date"
+  words:
+    index:
+      learned: "Learned"
+      not_learned: "Unlearned"
+      show_all: "All"
+      search_by_word: "Search by word"
+      list_words: "List words"

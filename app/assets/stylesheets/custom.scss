@@ -12,6 +12,16 @@ body {
   padding-top: 60px;
 }
 
+.ls-result {
+  border: 1px solid #e7e7e7;
+  .title_table {
+    background-color: #B8E6FF;
+  }
+  th, td {
+    border: 1px solid #e7e7e7;
+  }
+}
+
 section {
   overflow: auto;
 }
@@ -24,6 +34,17 @@ textarea {
   text-align: center;
   h1 {
     margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+  table {
+    align: center;
+    tr {
+      th, td {
+        padding: 10px;
+      }
+    }
   }
 }
 
@@ -186,6 +207,85 @@ input {
   }
 }
 
+/* common */
 .require {
   color: red;
+}
+
+.fl {
+  float: left;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.text-l {
+  text-align: left;
+}
+
+.text-r {
+  text-align: right;
+}
+
+/* box search */
+.box-search {
+  width: 100%;
+  margin: 20px 0 10px 0;
+  color: #666;
+}
+
+.title-ls-word {
+  font: bold 25px Arial;
+  margin-right: 55px;
+}
+
+.categories-search {
+  height: 34px;
+  min-width: 235px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chk-learn {
+  height: 34px;
+  padding: 5px 0 0 0;
+  margin: 0 25px 0 15px;
+  input {
+    width: 30px;
+  }
+}
+
+.word-search {
+  margin-right: 30px;
+}
+
+.btn-search {
+  width: 110px;
+}
+
+.catagories-name {
+  width: 40%;
+}
+
+.jp-word {
+  width: 25%;
+}
+
+.vn-word {
+  width: 25%;
+}
+
+.w-index {
+  width: 10%;
 }

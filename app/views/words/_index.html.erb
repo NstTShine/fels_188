@@ -1,0 +1,25 @@
+<table class="table table-hover bg-table ls-result">
+  <thead class="title_table">
+    <tr>
+      <th class="text-c w-index"><%= t "index" %></th>
+      <th class="text-c catagories-name"><%= t "category" %></th>
+      <th class="text-c jp-word"><%= t "japanese" %></th>
+      <th class="text-c vn-word"><%= t "vietnamese" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @words.each_with_index do |word, index| %>
+      <tr>
+        <td class="text-c">
+          <%= index_for params[:page], index, Settings.category.per_word %>
+        </td>
+        <td class="text-l"><%= word.category.name %></td>
+        <td class="text-l"><%= word.content %></td>
+        <td class="text-l"><% word.answers.each do |answer| %>
+          <%= answer.content if answer.is_correct %>
+        <% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate %>

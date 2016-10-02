@@ -1,6 +1,5 @@
 class Category < ApplicationRecord
   validates :name, presence: true
-  validates :desciption, length: {maximum: 300}
 
   has_many :lessons
   has_many :words
