@@ -35,4 +35,10 @@ class Word < ApplicationRecord
   scope :filter_category, -> category_id = 0{
     where "category_id = ?", "#{category_id}"
   }
+
+  def verify_used_word
+    if self.results.any?
+      errors.add "Used_word:", I18n.t("word_can_not_delete")
+    end
+  end
 end
