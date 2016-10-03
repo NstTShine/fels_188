@@ -1,4 +1,4 @@
-class Anwser < ApplicationRecord
+class Answer < ApplicationRecord
   validates :content, presence: true
 
   belongs_to :word
