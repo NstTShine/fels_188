@@ -5,6 +5,8 @@
       <th class="text-c catagories-name"><%= t "category" %></th>
       <th class="text-c jp-word"><%= t "japanese" %></th>
       <th class="text-c vn-word"><%= t "vietnamese" %></th>
+      <th class="text-c"><%= t "edit_word" %></th>
+      <th class="text-c"><%= t "delete_word" %></th>
     </tr>
   </thead>
   <tbody>
@@ -17,8 +19,19 @@
         <td class="text-l"><%= word.category.name %></td>
         <td class="text-l"><%= word.content %></td>
         <td class="text-l"><% word.answers.each do |answer| %>
-          <%= answer.content if answer.is_correct %>
+        <%= answer.content if answer.is_correct %>
         <% end %></td>
+        <td>
+          <%= link_to t(".link_update"),
+            edit_admin_word_path(word),
+            class: "btn btn-warning glyphicon glyphicon-edit" %>
+        </td>
+        <td>
+          <%= link_to t(".link_delete"), [:admin, word],
+            method: :delete, data: {confirm: t("sure"),
+            remote: true},
+            class: "btn btn-danger glyphicon glyphicon-trash" %>
+        </td>
       </tr>
     <% end %>
   </tbody>

@@ -8,7 +8,7 @@
           <% if logged_in? %>
           <% if current_user.is_admin %>
             <li><%= link_to (t ".categories"), admin_categories_path %></li>
-            <li><%= link_to (t ".words"), "#" %></li>
+            <li><%= link_to (t ".words"), admin_words_path %></li>
             <li><%= link_to (t ".users"), users_path %></li>
           <% else %>
             <li><%= link_to (t ".lessons"), "#" %></li>
