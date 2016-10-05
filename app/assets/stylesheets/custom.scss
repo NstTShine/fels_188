@@ -255,6 +255,22 @@ input {
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
+
+}
+
+.categories-search2 {
+  select {
+    height: 34px;
+    min-width: 235px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
 }
 
 .chk-learn {
@@ -274,6 +290,7 @@ input {
   width: 110px;
 }
 
+/* table show words */
 .catagories-name {
   width: 35%;
 }
@@ -298,9 +315,44 @@ input {
 .tbl-cate-name {
   width: 25%;
 }
-.cate-description{
+.cate-description {
   width: 35%;
 }
-.create-date{
-   width: 25%;
+.create-date {
+  width: 25%;
+}
+
+.cb-answer {
+  margin-top: 7px;
+}
+.btn-new-answer {
+  margin-right: 135px;
+}
+.btn-new-word {
+  margin: 7px 0;
+  padding: 7px 30px;
+  font-weight: bold;
+}
+.list-ls-text {
+  font-size: 32px;
+}
+
+/* table shows lessons */
+.contener-style {
+  padding-top: 20px;
+}
+.ls-index {
+  width: 5%;
+}
+.ls-category-name {
+  width: 35%;
+}
+.ls-create-date {
+  width: 35%;
+}
+.ls-result-column {
+  width: 10%;
+}
+.ls-review {
+  width: 15%;
 }

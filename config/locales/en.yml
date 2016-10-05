@@ -64,6 +64,11 @@ en:
   max_number_answers: "the maximum of five answers"
   min_number_answers: "the minimum of two answers"
   number_corecct_answer: "Number of correct answer will be just one"
+  join_lesson: "Join now"
+  create_succse_and_join_lesson: "Create success and joined lesson"
+  lesson_create_fail: "Lesson couldn't create!"
+  lesson_not_found: "Lesson not found !"
+  authorize_user_lesson_err: "Invalid user!"
 
   layouts:
     application:
@@ -144,3 +149,18 @@ en:
       show_all: "All"
       search_by_word: "Search by word"
       list_words: "List words"
+  lessons:
+    edit:
+      lesson_btn_submit: "Submit"
+      question_total: "Question total: "
+    index:
+      page_title: "Lesson list"
+      none: "---Please choose---"
+      list_lesson: "List lesson"
+    lesson:
+      index: "No."
+      category_name: "Category Name"
+      create_date: "Create Date"
+      result: "Result"
+      review: "Review"
+      btn_view: "View Details"

@@ -24,11 +24,9 @@
       <div class="fl">
         <%= submit_tag (t ".btn_search"), class: "btn btn-primary btn-search" %>
       </div>
-      <div class ="col-xs-2"></div>
-      <div class ="col-xs-1">
-        <%= link_to (t ".link_add"), new_admin_word_path,
-          class: "btn btn-success glyphicon glyphicon-plus pull-right" %>
-      </div>
+      <div class="clear-fix"></div>
+      <%= link_to (t ".link_add"), new_admin_word_path,
+        class: "btn btn-success pull-left btn-new-word" %>
     <% end %>
   </div>
   <%= render "index" %>
