@@ -21,6 +21,9 @@
 
 en:
   hello: "Hello world"
+  btn_update: "Update"
+  btn_delete: "Delete"
+  btn_add_new: "Add New"
   register_success: "Welcome to Framgia E-Learning"
   user_not_found: "User was not found!"
   error_ms: "The form contains"
@@ -55,6 +58,10 @@ en:
   vietnamese: "Vietnamese"
   edit_word: "Edit"
   delete_word: "Delete"
+  word_update_success: "update_successfully"
+  max_number_answers: "the maximum of five answers"
+  min_number_answers: "the minimum of two answers"
+  number_corecct_answer: "Number of correct answer will be just one"
 
   layouts:
     application:
@@ -108,8 +115,6 @@ en:
         option: "Option"
     words:
       index:
-        link_delete: "Delete"
-        link_update: "Update"
         link_add: "Add"
         admin_search_by_word: "Search by word"
         btn_search: "Search"
@@ -117,6 +122,13 @@ en:
         not_learned: "Unlearned"
         show_all: "All"
         list_words: "List words"
+      form:
+        add_answer: "Add Answer"
+        answers: "Vietnamese"
+        question: "Japanese"
+        category: "Category"
+      answer_fields:
+        btn_remove_answer: "remove"
   categories:
     index:
       page_title: "Show Categories"

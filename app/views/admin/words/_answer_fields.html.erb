@@ -1,0 +1,16 @@
+<fieldset class="field_answer">
+  <div class="attachment fields">
+    <div class="row">
+      <div class="col-md-7">
+        <%= f.text_field :content , class: "form-control"%>
+      </div>
+      <div class="col-md-1">
+        <%= f.check_box :is_correct , id: "answer", class: "BOOLEAN"%>
+      </div>
+      <div class="btn btn-danger btn-xs pull-right">
+        <%= link_to_remove_fields (t ".btn_remove_answer"), f%>
+      </div>
+    </div>
+    <br />
+  </div>
+</fieldset>
