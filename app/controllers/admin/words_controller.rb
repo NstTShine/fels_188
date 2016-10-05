@@ -1,7 +1,22 @@
 class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :load_word, only: [:edit, :update, :destroy]
-  before_action :load_categories, only: [:update, :edit]
+  before_action :load_categories, except: :destroy
+
+  def new
+    @word = Word.new
+    @button_in_form = t "btn_create"
+  end
+
+  def create
+    @word = Word.new word_params
+    if @word.save
+      flash[:success] = t "create_word_success"
+      redirect_to admin_words_url
+    else
+      render :new
+    end
+  end
 
   def show
   end
