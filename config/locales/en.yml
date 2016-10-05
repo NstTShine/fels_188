@@ -21,10 +21,11 @@
 
 en:
   hello: "Hello world"
+  btn_create: "Create"
   btn_update: "Update"
   btn_delete: "Delete"
   btn_add_new: "Add New"
-  register_success: "Welcome to Framgia E-Learning"
+  register_success: "Welcome to Framgia J-Learning"
   user_not_found: "User was not found!"
   error_ms: "The form contains"
   err: error
@@ -52,7 +53,8 @@ en:
   word_deleted: "Word was deleted !"
   word_delete_fail: "Delete failed !"
   tile_list_words: "List Words"
-  index: "Index"
+  create_word_success: "Create successfully"
+  index: "No."
   category: "Category"
   japanese: "Japanese"
   vietnamese: "Vietnamese"
@@ -65,14 +67,14 @@ en:
 
   layouts:
     application:
-      framgiaELearning: "Framgia E-Learning System"
+      framgiaELearning: "Framgia J-Learning System"
     footer:
       foo_content: "This is my first web site created in Ruby lang"
       about: "About"
       contact: "Contact"
       news: "News"
     header:
-      framgiaELearning: "Framgia E-Learning System"
+      framgiaELearning: "Framgia J-Learning System"
       home: "Home"
       help: "Help"
       categories: "Categories"
@@ -90,7 +92,7 @@ en:
       home: "Home"
       content: "Let me know how I can help. Please contact to"
     home:
-      content: "Wellcome to Framgia E-Learning System"
+      content: "Wellcome to Framgia J-Learning System"
       haha: "是非、Framgiaと楽しく勉強しましょう"
       signup: "Sign up now!"
   users:
@@ -115,7 +117,7 @@ en:
         option: "Option"
     words:
       index:
-        link_add: "Add"
+        link_add: "New word"
         admin_search_by_word: "Search by word"
         btn_search: "Search"
         learned: "Learned"
@@ -132,7 +134,6 @@ en:
   categories:
     index:
       page_title: "Show Categories"
-      order: "Order"
       category_name: "Category Name"
       description: "Description"
       created: "Create Date"
