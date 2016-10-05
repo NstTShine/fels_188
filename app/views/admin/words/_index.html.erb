@@ -22,15 +22,14 @@
         <%= answer.content if answer.is_correct %>
         <% end %></td>
         <td>
-          <%= link_to t(".link_update"),
-            edit_admin_word_path(word),
-            class: "btn btn-warning glyphicon glyphicon-edit" %>
+          <%= link_to "", edit_admin_word_path(word),
+            class: "btn btn glyphicon glyphicon-edit" %>
         </td>
         <td>
-          <%= link_to t(".link_delete"), [:admin, word],
+          <%= link_to "", [:admin, word],
             method: :delete, data: {confirm: t("sure"),
             remote: true},
-            class: "btn btn-danger glyphicon glyphicon-trash" %>
+            class: "btn btn glyphicon glyphicon-trash text-danger" %>
         </td>
       </tr>
     <% end %>

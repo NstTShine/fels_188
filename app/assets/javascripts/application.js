@@ -15,3 +15,43 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
+
+function remove_fields(link) {
+  dem =getdem();
+  if(dem > 2 ) {
+    if($(link).closest(".fields").find('input[type=checkbox]').is(':checked')){
+      alert('No delete correct answer');
+    }else{
+      $(link).prev('input[type=hidden]').val('1');
+      $(link).closest(".fields").hide();
+    }
+  }else{
+    alert(I18n.t("min_number_answers"));
+  }
+}
+
+function add_fields(link, association, content) {
+  var new_id = new Date().getTime();
+  var regexp = new RegExp("new_" + association, "g")
+  dem =getdem();
+  if(dem < 5 ) {
+    $("div.answers").append(content.replace(regexp, new_id));
+  }
+  else {
+    alert(I18n.t("max_number_answers"));
+  }
+}
+
+function getdem(){
+  dem=0;
+  $( ".attachment" ).each(function( index ) {
+    console.log(index)
+    if($( ".attachment" )[index].style.display !='none'){
+      dem++;
+    }
+  });
+  return dem;
+}
