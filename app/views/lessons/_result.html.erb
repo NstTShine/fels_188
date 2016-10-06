@@ -1,0 +1,9 @@
+<li class="item-word">
+  <%= f.label f.object.word.content %>
+  <ul>
+    <% f.object.word.answers.each do |answer| %>
+      <%= f.radio_button :answer_id, answer.id%>
+      <%= answer.content %>
+    <% end %>
+  </ul>
+</li>

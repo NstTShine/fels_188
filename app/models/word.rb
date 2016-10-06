@@ -17,6 +17,8 @@ class Word < ApplicationRecord
     reject_if: proc{|attributes| attributes["content"].blank?}
   after_initialize :build_word_answers
 
+  scope :random_words, -> {order("RANDOM()")}
+
   scope :in_category, -> category_id do
     where category_id: category_id if category_id.present?
   end

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :categories
   resources :words
+  resources :lessons
 
   namespace :admin do
     root "static_pages#home"
