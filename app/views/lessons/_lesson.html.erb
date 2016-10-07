@@ -20,7 +20,7 @@
           <td class="text-c"><%= lesson.created_at %></td>
           <td class="text-c"><%= lesson.score %></td>
           <td class="text-c">
-            <%= link_to t(".btn_view"), "#",
+            <%= link_to t(".btn_view"), lesson_path(lesson),
               class: "btn btn-success btn-sm" %>
           </td>
         </tr>

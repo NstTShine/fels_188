@@ -1,0 +1,22 @@
+<li>
+  <%= f.label f.object.word.content %>
+  <ul>
+    <% f.object.word.answers.each do |answer| %>
+      <div>
+      <%= f.radio_button :answer_id, answer.id, disabled: true, class: "col-sm-0" %>
+      <%= answer.content %>
+      </div>
+    <% end %>
+  </ul>
+  <p class="lesson-correct">
+    <% if f.object.is_correct %>
+      <font color="green">
+        <%= t ".correct_answer" %>
+      </font>
+    <% else %>
+      <font color="red">
+        <%= t ".incorrect_answer" %>
+      </font>
+    <% end %>
+  </p>
+</li>
