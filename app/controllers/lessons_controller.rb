@@ -12,8 +12,10 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new category_id: params[:lesson][:category_id],
       user_id: current_user.id
     if @lesson.save
+      current_user.create_activity Activity.activity_types[:create_lesson],
+        current_user.id
       flash[:success] = t "create_succse_and_join_lesson"
-      redirect_to edit_lesson_path(@lesson)
+      redirect_to edit_lesson_path @lesson
     else
       flash[:danger] = t "lesson_create_fail"
       redirect_to lessons_path
@@ -22,7 +24,9 @@ class LessonsController < ApplicationController
 
   def update
     @lesson.update_attributes lesson_params
-    redirect_to lesson_path(@lesson)
+    current_user.create_activity Activity.activity_types[:finished],
+        current_user.id
+    redirect_to lesson_path  @lesson
   end
 
   def edit

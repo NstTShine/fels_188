@@ -2,7 +2,7 @@ User.create!(name: "Example User", email: "example@abc.org",
   phone_number: "0986030060", password: "banhxe",
   password_confirmation: "banhxe", is_admin: true)
 
-99.times do |n|
+9.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@abc.org"
   password = "banhxe2"
@@ -24,7 +24,7 @@ end
   end
 end
 
-100.times do |n|
+150.times do |n|
   word_id = n + 1;
   content_answer1 = "Con Nguoi-#{n + 1}"
   Answer.create!(word_id: word_id, content: content_answer1, is_correct: true)

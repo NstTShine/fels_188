@@ -8,8 +8,7 @@ class Lesson < ApplicationRecord
 
   validate :check_words_size, on: :create
   accepts_nested_attributes_for :results
-    # reject_if: proc {|attributes| attributes[:word_id, :answer_id].blank?},
-    # allow_destroy: true
+
   before_create :assign_word
 
   def score

@@ -8,4 +8,24 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <h3 class="center"><%= t(".activity_title", name: @user.name) %></h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t ".activity" %></th>
+          <th><%= t ".timestamp" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @activity.each do |activity| %>
+          <%= render "shared/activity", activity: activity,
+            locals: {user: @user} %>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="pagingnate">
+      <%= will_paginate @activity %>
+    </div>
+  </div>
 </div>

@@ -70,7 +70,15 @@ en:
   lesson_not_found: "Lesson not found !"
   authorize_user_lesson_err: "Invalid user!"
   word_not_enough: "Word's number don't enough for create lesson"
+  follow: "had followed"
+  unfollow: "had unfollowed"
+  activity_create_lesson: "had created a lesson on"
+  activity_finish_lesson: "had finish a lesson on"
 
+  time:
+    formats:
+      short_datetime: "%B %d, %Y"
+      long_datetime:  "%B %d, %Y, at %r"
   layouts:
     application:
       framgiaELearning: "Framgia J-Learning System"
@@ -84,7 +92,7 @@ en:
       home: "Home"
       help: "Help"
       categories: "Categories"
-      lesson: "Lessons"
+      lessons: "Lessons"
       words: "Words"
       users: "Users"
       profile: "Profile"
@@ -92,6 +100,9 @@ en:
       login: "Log in"
       logout: "Log out"
       accout: "Account"
+  shared:
+    activity:
+      time_ago: "%{time} ago"
   static_pages:
     help:
       help: "Help"
@@ -112,6 +123,10 @@ en:
       edit_user: "Edit user"
       content: "Update your profile"
       change: "Change"
+    show:
+      activity_title: "Activities history"
+      activity: "Activity"
+      timestamp: "Time"
   sessions:
     new:
       login: "Log in"
