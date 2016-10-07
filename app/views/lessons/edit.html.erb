@@ -1,14 +1,19 @@
-<label><%= t ".question_total" %></label>
-<%= @lesson.results.size %>
-<%= form_for @lesson do |f| %>
-  <ol class="group-lesson">
-    <%= f.fields_for :results do |builder| %>
-        <%= render "result", f: builder %>
-    <% end %>
-  </ol>
+<div class="lesson-details">
+  <label class="total_qstion"><%= t ".question_total" %></label>
+  <%= @lesson.results.size %>
+  <div class="your-answers">
+    <%= form_for @lesson do |f| %>
+      <ol class="clear-fix">
+        <%= f.fields_for :results do |builder| %>
+          <%= render "result", f: builder %>
+        <% end %>
+      </ol>
+  </div>
   <div class="btn-lesson">
     <div class="col-sm-2">
-      <%= f.submit t(".lesson_btn_submit"), class: "btn btn-primary button" %>
+      <%= f.submit t(".lesson_btn_submit"), class: "btn btn-primary button",
+        data: {confirm: t(".finish_ls_confirm")} %>
     </div>
   </div>
-<% end %>
+  <% end %>
+</div>

@@ -20,6 +20,11 @@ class LessonsController < ApplicationController
     end
   end
 
+  def update
+    @lesson.update_attributes lesson_params
+    redirect_to @lesson
+  end
+
   def edit
   end
 
@@ -28,6 +33,10 @@ class LessonsController < ApplicationController
     unless @lesson
       flash[:danger] = t "lesson_not_found"
     end
+  end
+
+  def lesson_params
+    params.require(:lesson).permit results_attributes: [:id, :answer_id]
   end
 
   def authorize_user_lesson

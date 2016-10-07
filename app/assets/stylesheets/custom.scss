@@ -350,9 +350,42 @@ input {
 .ls-create-date {
   width: 35%;
 }
+
+/* table show lesson */
 .ls-result-column {
   width: 10%;
 }
 .ls-review {
   width: 15%;
+}
+.times-info {
+  font-size: 14px;
+  font-style: italic;
+}
+.mark-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.mark-value {
+  font-size: 16px;
+  color: red;
+}
+.your-answers {
+  width: 80%;
+  margin: 0 auto;
+  input {
+    width: 10px;
+    margin-right: 10px;
+  }
+  ol {
+    padding: 0 0 0 15px;
+  }
+  ul {
+    padding: 0px;
+  }
+}
+
+.total_qstion {
+  padding-top: 35px;
+  font-size: 25px;
 }

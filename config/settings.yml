@@ -11,3 +11,4 @@ admin:
     answer_min_size: 2
     default_size_word_answers: 4
 words_in_each_lesson: 10
+number_word_require: 15
