@@ -1,6 +1,6 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to (t ".framgiaELearning"), "#", id: "logo" %>
+    <%= link_to (t ".framgiaELearning"), root_path, id: "logo" %>
     <nav>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to (t ".home"), root_path %></li>
@@ -9,7 +9,7 @@
           <% if current_user.is_admin %>
             <li><%= link_to (t ".categories"), admin_categories_path %></li>
             <li><%= link_to (t ".words"), admin_words_path %></li>
-            <li><%= link_to (t ".users"), users_path %></li>
+            <li><%= link_to (t ".users"), admin_users_path %></li>
           <% else %>
             <li><%= link_to (t ".lessons"), lessons_path %></li>
             <li><%= link_to (t ".categories"), categories_path %></li>

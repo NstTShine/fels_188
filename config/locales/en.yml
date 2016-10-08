@@ -74,6 +74,8 @@ en:
   unfollow: "had unfollowed"
   activity_create_lesson: "had created a lesson on"
   activity_finish_lesson: "had finish a lesson on"
+  admin_delete_user_success: "has been delete !"
+  admin_delete_user_fail: "can not be delete !"
 
   time:
     formats:
@@ -99,7 +101,7 @@ en:
       settings: "Settings"
       login: "Log in"
       logout: "Log out"
-      accout: "Account"
+      account: "Account"
   shared:
     activity:
       time_ago: "%{time} ago"
@@ -117,7 +119,12 @@ en:
       title_singup: "Sign up"
       create_acc: "Create my account"
     index:
-      alluser: "All users"
+      alluser: "All Users"
+      search_title: "Search by users name"
+      index: "No."
+      avatar: "Avatar"
+      name: "Name"
+      email: "Email"
     edit:
       save_change: "Save changes"
       edit_user: "Edit user"
@@ -152,6 +159,16 @@ en:
         category: "Category"
       answer_fields:
         btn_remove_answer: "remove"
+    users:
+      index:
+        alluser: "All Users"
+        search_title: "Search by users name"
+        index: "No."
+        avatar: "Avatar"
+        name: "Name"
+        email: "Email"
+        link_delete: "Delete"
+        confirm_delete: "Are you sure for delete this user ???"
   categories:
     index:
       page_title: "Show Categories"

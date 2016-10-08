@@ -2,6 +2,7 @@ class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :load_word, only: [:edit, :update, :destroy]
   before_action :load_categories, except: :destroy
+  before_action :check_admin
 
   def new
     @word = Word.new

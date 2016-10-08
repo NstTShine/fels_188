@@ -1,6 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy, :edit]
   before_action :load_category, only: [:edit, :update, :destroy]
+  before_action :check_admin
 
   def index
     @categories = Category.order(created_at: :desc)

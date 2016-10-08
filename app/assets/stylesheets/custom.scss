@@ -12,6 +12,20 @@ body {
   padding-top: 60px;
 }
 
+.ls-users {
+  border: 1px solid #e7e7e7;
+  .title_table {
+    background-color: #B8E6FF;
+  }
+}
+
+.ls-activities {
+  border: 1px solid #e7e7e7;
+  .title_table {
+    background-color: #B8E6FF;
+  }
+}
+
 .ls-result {
   border: 1px solid #e7e7e7;
   .title_table {
@@ -198,7 +212,6 @@ input {
     font-weight: bold;
     text-decoration: none;
     border-radius: 4px;
-    background-color: #2196F3;
     text-align: center;
     opacity: 0.85;
     &:hover {

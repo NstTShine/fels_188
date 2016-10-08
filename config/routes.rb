@@ -19,5 +19,6 @@ Rails.application.routes.draw do
     root "static_pages#home"
     resources :categories
     resources :words
+    resources :users
   end
 end

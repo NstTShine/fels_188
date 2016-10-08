@@ -40,4 +40,5 @@ module ApplicationHelper
       "add_fields(this, '#{association}', '#{escape_javascript(fields)}')",
       :class => "btn btn-success btn-new-answer")
   end
+
 end
