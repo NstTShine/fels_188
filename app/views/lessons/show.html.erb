@@ -4,7 +4,7 @@
   <div class="your-answers">
     <%= link_to t(".link_back"), lessons_path, class: "btn btn-primary btn-new-word pull-left" %>
     <div class="pull-right">
-      <p class="times-info"><%= @lesson.created_at %></p>
+      <p class="times-info"><%= @lesson.created_at.strftime(t"time.formats.long_datetime") %></p>
       <p class="mark-title"><%= t ".your_score" %></p>
       <p class="mark-value"><%= @lesson.score %></p>
     </div>

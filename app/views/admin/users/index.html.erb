@@ -14,7 +14,7 @@
       <th class="text-c"><%= t ".index" %></th>
       <th class="text-c"><%= t ".avatar" %></th>
       <th class="text-c"><%= t ".name" %></th>
-      <th class="text-c"><%= t ".email" %></th>
+      <th class="text-c"><%= t ".created_date" %></th>
       <th class="text-c"><%= t ".link_delete" %></th>
     </tr>
   </thead>
@@ -29,7 +29,8 @@
             size: Settings.admin.users.image_size %>
           </td>
           <td class="text-c"><%= link_to user.name, user %></td>
-          <td class="text-c"><%= user.email %></td>
+          <td class="text-c"><%= user.created_at
+            .strftime(t"time.formats.short_datetime") %></td>
           <td class="text-c">
             <% if current_user.is_admin? && !current_user.current_user?(user) %>
               <%= link_to raw("<span class='glyphicon glyphicon-trash

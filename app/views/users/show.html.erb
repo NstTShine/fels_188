@@ -7,11 +7,29 @@
         <%= @user.name %>
       </h1>
     </section>
+    <section class="stats">
+    <% @user ||= current_user %>
+      <div class="stats">
+        <span>
+          <strong id="following" class="stat">
+            <%= t ".following" %><%= @user.following.count %>
+          </strong>
+        </span>
+        <span>
+          <strong id="followers" class="stat">
+            <%= t ".followers" %><%= @user.followers.count %>
+          </strong>
+        </span>
+      </div>
+      <div class="item-buttons">
+        <%= render "follow_form" if logged_in? %>
+      </div>
+    </section>
   </aside>
   <div class="col-md-8">
     <h3 class="center"><%= t(".activity_title", name: @user.name) %></h3>
-    <table class="table table-striped">
-      <thead>
+    <table class="table table-striped ls-users">
+      <thead class="title_table">
         <tr>
           <th><%= t ".activity" %></th>
           <th><%= t ".timestamp" %></th>

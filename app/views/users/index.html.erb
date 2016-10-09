@@ -14,7 +14,7 @@
       <th class="text-c"><%= t ".index" %></th>
       <th class="text-c"><%= t ".avatar" %></th>
       <th class="text-c"><%= t ".name" %></th>
-      <th class="text-c"><%= t ".email" %></th>
+      <th class="text-c"><%= t ".created_at" %></th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +28,8 @@
             size: Settings.admin.users.image_size %>
           </td>
           <td class="text-c"><%= link_to user.name, user %></td>
-          <td class="text-c"><%= user.email %></td>
+          <td class="text-c"><%= user.created_at
+            .strftime(t"time.formats.short_datetime") %></td>
         </tr>
       <% end %>
   </tbody>

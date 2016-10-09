@@ -9,7 +9,6 @@ gem "faker",                   "1.6.3"
 gem "config"
 gem "i18n-js", ">= 3.0.0.rc11"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0"
 # Use Uglifier as compressor for JavaScript assets
@@ -34,19 +33,17 @@ gem "bootstrap-sass", "~> 3.3.1"
 
 # Use Unicorn as the app server
 # gem "unicorn"
-gem "listen",  "3.0.8"
 # Use Capistrano for deployment
 # gem "capistrano-rails", group: :development
 
 group :development, :test do
-  # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug"
+  gem "sqlite3"
+  gem "web-console", "~> 2.0"
+  gem "spring"
+  gem "listen",  "3.0.8"
 end
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem "web-console", "~> 2.0"
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem "spring"
+group :production do
+  gem 'pg', '0.18.4'
 end

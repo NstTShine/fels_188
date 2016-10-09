@@ -9,9 +9,9 @@ module UsersHelper
   def check_activity action_type, target_id, user
     case action_type
     when Activity.activity_types[:follow]
-      user.name + t("follow") + User.find_by(id: target_id).name
+      user.name + t("activity_follow") + User.find_by(id: target_id).name
     when Activity.activity_types[:unfollow]
-      user.name + t("unfollow") + User.find_by(id: target_id).name
+      user.name + t("activity_unfollow") + User.find_by(id: target_id).name
     when Activity.activity_types[:create_lesson]
       user.name + t("activity_create_lesson")
     when Activity.activity_types[:finished]
