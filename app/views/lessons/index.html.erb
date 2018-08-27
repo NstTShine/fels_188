@@ -1,0 +1,21 @@
+<% provide :title, t(".page_title") %>
+<div class="portlet grid grid-word contener-style">
+  <div class="portlet-title">
+    <div class="caption">
+      <span class="col-sm-2 list-ls-text"><%= t ".list_lesson"%></span>
+      <div class="grid-search col-sm-10 text-right">
+        <%= form_for @lesson do |f| %>
+          <div class="col-sm-4 no-padding-right">
+            <%= f.select :category_id,
+              options_from_collection_for_select(@categories, "id", "name", {}),
+              {include_blank: t(".none")}, {class: "form-control"} %>
+          </div>
+          <div class="col-sm-2">
+            <%= f.submit t("join_lesson"), class: "btn btn-primary btn100per" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= render "lesson" %>
+</div>

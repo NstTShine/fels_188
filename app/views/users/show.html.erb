@@ -1,0 +1,49 @@
+<% provide :title, @user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section class="stats">
+    <% @user ||= current_user %>
+      <div class="stats">
+        <span>
+          <strong id="following" class="stat">
+            <%= t ".following" %><%= @user.following.count %>
+          </strong>
+        </span>
+        <span>
+          <strong id="followers" class="stat">
+            <%= t ".followers" %><%= @user.followers.count %>
+          </strong>
+        </span>
+      </div>
+      <div class="item-buttons">
+        <%= render "follow_form" if logged_in? %>
+      </div>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <h3 class="center"><%= t(".activity_title", name: @user.name) %></h3>
+    <table class="table table-striped ls-users">
+      <thead class="title_table">
+        <tr>
+          <th><%= t ".activity" %></th>
+          <th><%= t ".timestamp" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @activity.each do |activity| %>
+          <%= render "shared/activity", activity: activity,
+            locals: {user: @user} %>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="pagingnate">
+      <%= will_paginate @activity %>
+    </div>
+  </div>
+</div>

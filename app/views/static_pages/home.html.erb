@@ -1,0 +1,12 @@
+<div class="center jumbotron">
+  <h3><%= t ".content" %></h3>
+
+  <h2><%= t ".haha" %></h2>
+
+  <%= unless logged_in?
+    link_to t(".signup"), signup_path, class: "btn btn-lg btn-primary"
+  end %>
+</div>
+
+<%= link_to image_tag("framgia_logo.jpg", alt: "rails logo"),
+  "http://rubyonrails.org/" %>

@@ -1,0 +1,26 @@
+<%= form_for [:admin, @word] do |f| %>
+  <%= render "/shared/error_messages", object: f.object %>
+  <%= f.label :Category, (t ".category") %>
+  <div class="categories-search2">
+    <%= f.select :category_id, options_for_select(
+    @categories.collect{ |category| [category.name, category.id]},
+    params[:category_id]) %>
+  </div>
+  <%= f.label :Questions, (t ".question") %>
+  <%= f.text_field :content, class: "form-control" %>
+
+  <%= f.label :content, (t ".answers") %>
+  <span class="pull-right">
+    <%= link_to_add_fields t(".add_answer"), f, :answers %>
+  </span>
+  <div class="clear-fix"></div>
+  <div class="answers">
+    <%= f.fields_for :answers do |t| %>
+      <%= render "answer_fields", f: t %>
+    <% end %>
+  </div>
+  <br/>
+  <br/>
+  <%= f.submit @button_in_form, id: "create_word",
+    class: "btn btn-primary" %>
+<% end %>

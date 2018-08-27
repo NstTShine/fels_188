@@ -1,0 +1,443 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+$gray-light: #777;
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+.ls-users {
+  border: 1px solid #e7e7e7;
+  .title_table {
+    background-color: #B8E6FF;
+  }
+}
+
+.ls-activities {
+  border: 1px solid #e7e7e7;
+  .title_table {
+    background-color: #B8E6FF;
+  }
+}
+
+.ls-result {
+  border: 1px solid #e7e7e7;
+  .title_table {
+    background-color: #B8E6FF;
+  }
+  th, td {
+    border: 1px solid #e7e7e7;
+  }
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style: none;
+  }
+  table {
+    align: center;
+    tr {
+      th, td {
+        padding: 10px;
+      }
+    }
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: blue;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.div-add-new {
+  width: 100%;
+  padding: 0 15px 0 15px;
+  margin: 25px 0 20px 0;
+  a {
+    color: #fff;
+    padding: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    opacity: 0.85;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+/* common */
+.require {
+  color: red;
+}
+
+.fl {
+  float: left;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.text-c {
+  text-align: center;
+}
+
+.text-l {
+  text-align: left;
+}
+
+.text-r {
+  text-align: right;
+}
+
+/* box search */
+.box-search {
+  width: 100%;
+  margin: 20px 0 10px 0;
+  color: #666;
+}
+
+.title-ls-word {
+  font: bold 25px Arial;
+  margin-right: 55px;
+}
+
+.categories-search {
+  height: 34px;
+  min-width: 235px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+.categories-search2 {
+  select {
+    height: 34px;
+    min-width: 235px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+}
+
+.chk-learn {
+  height: 34px;
+  padding: 5px 0 0 0;
+  margin: 0 25px 0 15px;
+  input {
+    width: 30px;
+  }
+}
+
+.word-search {
+  margin-right: 30px;
+}
+
+.btn-search {
+  width: 110px;
+}
+
+/* table show words */
+.catagories-name {
+  width: 35%;
+}
+
+.jp-word {
+  width: 25%;
+}
+
+.vn-word {
+  width: 25%;
+}
+
+.w-index {
+  width: 5%;
+}
+.opt-edit {
+  width: 5%;
+}
+.opt-delete {
+  width: 5%;
+}
+.tbl-cate-name {
+  width: 25%;
+}
+.cate-description {
+  width: 35%;
+}
+.create-date {
+  width: 25%;
+}
+
+.cb-answer {
+  margin-top: 7px;
+}
+.btn-new-answer {
+  margin-right: 135px;
+}
+.btn-new-word {
+  margin: 7px 0;
+  padding: 7px 30px;
+  font-weight: bold;
+}
+.list-ls-text {
+  font-size: 32px;
+}
+
+/* table shows lessons */
+.contener-style {
+  padding-top: 20px;
+}
+.ls-index {
+  width: 5%;
+}
+.ls-category-name {
+  width: 35%;
+}
+.ls-create-date {
+  width: 35%;
+}
+
+/* table show lesson */
+.ls-result-column {
+  width: 10%;
+}
+.ls-review {
+  width: 15%;
+}
+.times-info {
+  font-size: 14px;
+  font-style: italic;
+}
+.mark-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.mark-value {
+  font-size: 16px;
+  color: red;
+}
+.your-answers {
+  width: 80%;
+  margin: 0 auto;
+  input {
+    width: 10px;
+    margin-right: 10px;
+  }
+  ol {
+    padding: 0 0 0 15px;
+  }
+  ul {
+    padding: 0px;
+  }
+}
+
+.total_qstion {
+  padding-top: 35px;
+  font-size: 25px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    line-height: 2;
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}

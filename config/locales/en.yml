@@ -1,0 +1,213 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  btn_create: "Create"
+  btn_update: "Update"
+  btn_delete: "Delete"
+  btn_add_new: "Add New"
+  register_success: "Welcome to Framgia J-Learning"
+  user_not_found: "User was not found!"
+  error_ms: "The form contains"
+  err: error
+  login_error: "Invalid email/password combination"
+  login_require: "Please log in!"
+  update_success: "Profile updated"
+  category_delete: "Delete this Category"
+  category_edit: "Edit this Category"
+  update_category_success: "Update Success !"
+  update_category_fail: "Update failed !"
+  category_not_found: "Category was not found"
+  category_edit_title: "Edit Category"
+  category_btn_update: "Update"
+  category_add_title1: "Add Category"
+  category_btn_add: "Add"
+  category_page_title: "Show Categories"
+  category_add_success: "Add Success"
+  category_add_fail: "Add failed!"
+  word_not_found: "Word was not found !"
+  sure: "Are you sure?"
+  category_deleted: "Category was deleted !"
+  category_delete_fail: "Delete failed !"
+  can_not_delete_category: "Can not delete because the data is being used"
+  word_can_not_delete: "Can not delete because the data is being used"
+  word_deleted: "Word was deleted !"
+  word_delete_fail: "Delete failed !"
+  tile_list_words: "List Words"
+  create_word_success: "Create successfully"
+  index: "No."
+  category: "Category"
+  japanese: "Japanese"
+  vietnamese: "Vietnamese"
+  edit_word: "Edit"
+  delete_word: "Delete"
+  word_update_success: "update_successfully"
+  max_number_answers: "the maximum of five answers"
+  min_number_answers: "the minimum of two answers"
+  number_corecct_answer: "Number of correct answer will be just one"
+  join_lesson: "Join now"
+  create_succse_and_join_lesson: "Create success and joined lesson"
+  lesson_create_fail: "Word's number don't enough for create lesson!"
+  lesson_not_found: "Lesson not found !"
+  authorize_user_lesson_err: "Invalid user!"
+  word_not_enough: "Word's number don't enough for create lesson"
+  follow: "had followed"
+  unfollow: "had unfollowed"
+  activity_create_lesson: " had created a lesson."
+  activity_finish_lesson: " had finished a lesson."
+  activity_follow: " had followed "
+  activity_unfollow: " had unfollowed to "
+  admin_delete_user_success: "has been delete !"
+  admin_delete_user_fail: "can not be delete !"
+
+  time:
+    formats:
+      short_datetime: "%B %d, %Y"
+      long_datetime:  "%B %d, %Y, at %r"
+  layouts:
+    application:
+      framgiaELearning: "Framgia J-Learning System"
+    footer:
+      foo_content: "This is my first web site created in Ruby lang"
+      about: "About"
+      contact: "Contact"
+      news: "News"
+    header:
+      framgiaELearning: "Framgia J-Learning System"
+      home: "Home"
+      help: "Help"
+      categories: "Categories"
+      lessons: "Lessons"
+      words: "Words"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      login: "Log in"
+      logout: "Log out"
+      account: "Account"
+  shared:
+    activity:
+      time_ago: "%{time} ago"
+  static_pages:
+    help:
+      help: "Help"
+      home: "Home"
+      content: "Let me know how I can help. Please contact to"
+    home:
+      content: "Wellcome to Framgia J-Learning System"
+      haha: "是非、Framgiaと楽しく勉強しましょう"
+      signup: "Sign up now!"
+  users:
+    new:
+      title_singup: "Sign up"
+      create_acc: "Create my account"
+    index:
+      alluser: "All Users"
+      search_title: "Search by users name"
+      index: "No."
+      avatar: "Avatar"
+      name: "Name"
+      created_at: "Created Date"
+    edit:
+      save_change: "Save changes"
+      edit_user: "Edit user"
+      content: "Update your profile"
+      change: "Change"
+    show:
+      activity_title: "Activities history"
+      activity: "Activity"
+      timestamp: "Time"
+      following: "following: "
+      followers: "followers: "
+  sessions:
+    new:
+      login: "Log in"
+      signup: "Sign up now!"
+      new: "New user?"
+  admin:
+    categories:
+      index:
+        option: "Option"
+    words:
+      index:
+        link_add: "New word"
+        admin_search_by_word: "Search by word"
+        btn_search: "Search"
+        learned: "Learned"
+        not_learned: "Unlearned"
+        show_all: "All"
+        list_words: "List words"
+      form:
+        add_answer: "Add Answer"
+        answers: "Vietnamese"
+        question: "Japanese"
+        category: "Category"
+      answer_fields:
+        btn_remove_answer: "remove"
+    users:
+      index:
+        alluser: "All Users"
+        search_title: "Search by users name"
+        index: "No."
+        avatar: "Avatar"
+        name: "Name"
+        created_date: "Created Date"
+        link_delete: "Delete"
+        confirm_delete: "Are you sure for delete this user ???"
+  categories:
+    index:
+      page_title: "Show Categories"
+      category_name: "Category Name"
+      description: "Description"
+      created: "Create Date"
+      list_category_title: "List Categories"
+  words:
+    index:
+      learned: "Learned"
+      not_learned: "Unlearned"
+      show_all: "All"
+      search_by_word: "Search by word"
+      list_words: "List words"
+  lessons:
+    edit:
+      lesson_btn_submit: "Submit"
+      question_total: "Question total: "
+      finish_ls_confirm: "Are you sure ???"
+    index:
+      page_title: "Lesson list"
+      none: "---Please choose---"
+      list_lesson: "List lesson"
+    lesson:
+      index: "No."
+      category_name: "Category Name"
+      create_date: "Create Date"
+      result: "Result"
+      review: "Review"
+      btn_view: "View Details"
+    final_result:
+      correct_answer: "Correct"
+      incorrect_answer: "Incorrect"
+    show:
+      title_page: "Lesson Result"
+      link_back: "Back to list"
+      your_answers: "Your Ansers"
+      your_score: "Your Score"
